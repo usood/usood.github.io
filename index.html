@@ -1,106 +1,92 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Upahar Sood's Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Personal Homepage">
+    <meta name="author" content="Upahar Sood">
 
-	<title>Upahar Sood's Website</title>
-	<meta http-equiv="Content-category" content="text/html; charset=ISO-8859-1" />
-	<link href="css/splash.css" rel="stylesheet" category="text/css" />
-    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" /> 
-	<link rel="SHORTCUT ICON" href="/favicon.ico" />
-	<script src="js/jquery-1.3.2.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="js/galleria.js"></script>
-	<script type="text/javascript" src="js/plugins/galleria.flickr.js"></script> 
-	<script>
-	    // Load theme
-	    Galleria.loadTheme('js/themes/lightbox/galleria.lightbox.js');
-	</script>
-	<script type="text/javascript" charset="utf-8">
-		$(document).ready(function(){
-			$("a[rel^='prettyPhoto']").prettyPhoto();
-		});
-	</script>
-	<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
-	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
-	
-	<script type="text/javascript" src="js/switches.js"></script>
-	<script type="text/javascript">
-		//document.getElementById('nav').style = 'display: none;';
-	</script>
-	<style>
-		body
-		{
-			
-			<? if(isset($visual_style['background_image']) && $visual_style['background_image'] != '') {echo 'background-image: url('.$visual_style['background_image'].');';} ?>
-			
-		}
-		div#nav, div#nav a
-		{
-			
-			<? if(isset($visual_style['navigation_color']) && $visual_style['navigation_color'] != '') {
-				echo('color: '.$visual_style['navigation_color'].';');
-				} ?>
-		
-			<? if(isset($visual_style['navigation_shadows']) && $visual_style['navigation_shadows'] != '') {
-				echo 'text-shadow:0px 0px 6px #666';
-				} ?>
-			
-		}
-	</style>
-</head>
-<body>
-	<div id="nav">
-		<h1>
-		<? if (isset($general['first_name']) && $general['first_name'] != '') {echo strtolower($general['first_name']);} ?> <? if (isset($general['last_name']) && $general['last_name'] != '') {echo strtolower($general['last_name']);} ?>
-		</h1>
-		<div id="elements">
-			<ol>
-				<li><a href="javascript:switchto('about');" id="nav_about">about</a></li>
-				<? if ($flickr_on == true) { ?><li><a href="javascript:switchto('photos');" id="nav_photos">photos</a></li><? } ?>
-				<? if ($video_bubble == true) { ?><li><a href="javascript:switchto('videos');" id="nav_videos">videos</a></li><? } ?>
-				<? if ($twitter_on == true) { ?><li><a href="javascript:switchto('twitter');" id="nav_twitter">twitter</a></li><? } ?>
-			</ol>
-		</div>
-	</div>
-	
-	<div id="triangle">
-		<img src="images/bubble_triangle_100.png" width="30" height="15" />
-	</div>
-	
-	<div id="about" class="content_bubble">
-		<h3>about</h3>
-		<p><?=$general['about_me']; ?></p>
-	</div>
-	
-	<div id="photos" class="content_bubble">
-		<h3><? if (isset($general['first_name']) && $general['first_name'] != '') {echo strtolower($general['first_name'])."'s ";} ?>photos</h3>
-		<? if ($flickr_on == true) { ?>
-		<p>
-			<div id="galleria">Loading...</div> 
-			<script>
-                // Flickr init
-                var api_key = <?='\''.$accounts['flickr']['apikey'].'\'' ?>;
-                var flickr = new Galleria.Flickr(api_key);
-                // Get my photostream
-                flickr.setOptions({
-                    size: 'large', max: 25, sort: 'date-posted-desc'
-                }).getUser('<?=$accounts['flickr']['username'] ?>', function(data) {
-                    $('#galleria').galleria({
-                        data_source: data,
-                        debug: true
-                    });
-                });
-				document.getElementById('photos').style.display = 'none';
-            </script>
-		</p>	
-		<p id="more">
-			<a href="http://flickr.com/photos/<?=$accounts['flickr']['username'] ?>">More...</a>
-		</p>
-		<? } ?>
-	</div>
-	
-	
-	<div id="spacer" style="padding-bottom: 12px; float: right; clear: both;">&nbsp;</div>
-	
-</body>
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+			  <li><a href="#projects">Projects</a></li>
+			  <li><a href="#pictures">Photos</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Welcome!</h1>
+        <p>This is my personal page where I link you to my interests and showcase some of my projects</p>
+        <p><a class="btn btn-primary btn-large">Learn more about me &raquo;</a></p>
+      </div>
+
+    
+
+      <hr>
+
+      <footer>
+        <p>Thanks for visiting</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
 </html>
