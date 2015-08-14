@@ -19,15 +19,15 @@ social:
   - title: facebook
     url: http://facebook.com/upaharsood
   - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
+    url: http://stackexchange.com/users/1094864/upaharsood
   - title: bitbucket 
-    url: http://bitbucket.org/jekyll
+    url: https://bitbucket.org/upaharsood/
   - title: github
     url: http://github.com/usood
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Hiranandani Gardens, Powai
+  - line: Hiranandani Gardens Powai
   - line: Mumbai - 400076
 
 # Build settings
