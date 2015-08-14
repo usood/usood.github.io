@@ -1,0 +1,35 @@
+url: https://usood.github.io
+baseurl: 
+
+# Site settings
+title: Upahar Sood
+email: upahar.sood@utexas.edu
+description: "Full Stack Developer / Budding UX Designer / Budding Android Developer"
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: C00020
+  secondary: C00020 
+  secondary-dark: 333
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/upaharsood
+  - title: facebook
+    url: http://facebook.com/upaharsood
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket 
+    url: http://bitbucket.org/jekyll
+  - title: github
+    url: http://github.com/usood
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Hiranandani Gardens, Powai
+  - line: Mumbai - 400076
+
+# Build settings
+markdown: kramdown
+permalink: pretty
